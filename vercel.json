@@ -1,1 +1,5 @@
-ewogICJ2ZXJzaW9uIjogMiwKICAiYnVpbGRzIjogW3sgInNyYyI6ICJpbmRleC5odG1sIiwgInVzZSI6ICJAdmVyY2VsL3N0YXRpYyIgfV0sCiAgInJvdXRlcyI6IFt7ICJzcmMiOiAiLyguKikiLCAiZGVzdCI6ICIvaW5kZXguaHRtbCIgfV0KfQo=
+{
+  "version": 2,
+  "builds": [{ "src": "index.html", "use": "@vercel/static" }],
+  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
+}
