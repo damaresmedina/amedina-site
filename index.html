@@ -205,7 +205,7 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
 .hero-sub{animation:fu .8s ease both .5s}
 .hero-stats{animation:fu .8s ease both .65s}
 .hero-ctas{animation:fu .7s ease both .8s}
-.brand-seal{display:flex;align-items:center;justify-content:center;padding:6rem 2rem 5rem;background:var(--n1);border-top:.5px solid rgba(200,146,42,.1);position:relative}
+.brand-seal{display:flex;align-items:center;justify-content:center;padding:8rem 2rem 6rem;background:radial-gradient(ellipse at center, rgba(13,24,40,.95) 0%, var(--n1) 55%, var(--k) 100%);position:relative;overflow:hidden}
 
 /* ============ MOBILE ============ */
 @media (max-width:900px){
@@ -249,9 +249,9 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
   nav{padding:.75rem .9rem}
   .sn{font-size:2.5rem}
 }
-.brand-seal::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:1px;background:linear-gradient(to right,transparent,var(--g2),transparent)}
-.brand-seal img{width:min(260px,62vw);height:auto;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 .5px rgba(200,146,42,.2);border-radius:4px;transition:transform .6s ease}
-.brand-seal img:hover{transform:scale(1.015)}
+.brand-seal::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:90px;height:1px;background:linear-gradient(to right,transparent,rgba(200,146,42,.4),transparent)}
+.brand-seal img{width:min(360px,78vw);height:auto;-webkit-mask-image:radial-gradient(ellipse at center,#000 42%,transparent 78%);mask-image:radial-gradient(ellipse at center,#000 42%,transparent 78%);filter:drop-shadow(0 0 60px rgba(200,146,42,.08));transition:transform 1.2s ease,filter 1.2s ease}
+.brand-seal img:hover{transform:scale(1.02);filter:drop-shadow(0 0 70px rgba(200,146,42,.14))}
 </style>
 <link rel="icon" type="image/jpeg" href="/amedina-logo.jpeg">
 <link rel="apple-touch-icon" href="/amedina-logo.jpeg">
