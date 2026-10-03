@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Damares Medina</title>
+<title>Amedina · Damares Medina</title>
+<meta name="description" content="Advocacia constitucional, pesquisa empírica e participação pública. Conheça o pensamento, os projetos e as iniciativas de Damares Medina.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -252,6 +253,36 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
 .brand-seal::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:90px;height:1px;background:linear-gradient(to right,transparent,rgba(200,146,42,.4),transparent)}
 .brand-seal img{width:min(360px,82vw);height:auto;-webkit-mask-image:radial-gradient(ellipse at center,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse at center,#000 70%,transparent 100%);filter:drop-shadow(0 0 60px rgba(200,146,42,.08));transition:transform 1.2s ease,filter 1.2s ease}
 .brand-seal img:hover{transform:scale(1.02);filter:drop-shadow(0 0 80px rgba(200,146,42,.14))}
+
+/* Amedina em diálogo */
+section[id]{scroll-margin-top:90px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--g1);outline-offset:5px}
+.hero-ctas{flex-wrap:wrap}
+.nls{gap:1.4rem}
+.dialogo{padding:5rem 3.5rem;background:var(--n1);border-block:1px solid rgba(200,146,42,.2)}
+.dialogo-top{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:start;margin-bottom:3rem}
+.dialogo-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--g1);margin-bottom:1rem}
+.dialogo h2{font-family:"Playfair Display",serif;font-size:clamp(2.2rem,4.2vw,4rem);font-weight:400;line-height:1.1;max-width:620px}
+.dialogo h2 em{color:var(--g1);font-weight:400}
+.dialogo p{font-size:15px;line-height:1.8;color:#d8d3c7}
+.dialogo-intro p+p{margin-top:1rem}
+.dialogo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.dialogo-card{display:flex;flex-direction:column;padding:1.6rem;background:var(--n2);border:1px solid #564525}
+.dialogo-card h3{font-family:"Playfair Display",serif;font-size:1.35rem;font-weight:400;line-height:1.35;margin:.7rem 0 1rem}
+.dialogo-card p{font-size:14px}
+.dialogo-card a{margin-top:auto;padding-top:1.6rem;color:var(--g1);font-size:13px;text-underline-offset:5px;line-height:1.7}
+.dialogo-kind{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--g1);text-transform:uppercase}
+.dialogo-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.dialogo-participar{margin-top:2.5rem;padding-top:2rem;border-top:1px solid #564525;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.dialogo-participar h3{font-family:"Playfair Display",serif;font-size:1.5rem;font-weight:400;margin-bottom:.75rem}
+.contact-note{font-size:13px;color:#d8d3c7;line-height:1.7}
+.contact-note a{color:var(--g1);overflow-wrap:anywhere}
+.ff label{color:var(--g1);font-size:10px}
+.ff input::placeholder,.ff textarea::placeholder{color:#9c9c9c}
+@media(max-width:1100px){.nls{gap:.8rem}nav{padding-inline:1.5rem}}
+@media(max-width:900px){.dialogo{padding:3rem 1.25rem}.dialogo-top,.dialogo-grid,.dialogo-participar{grid-template-columns:1fr;gap:1.5rem}.dialogo-links a{width:100%;text-align:center}.hero-ctas a{max-width:100%;line-height:1.5}.about-text-col,.split-content{padding:3rem 1.5rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
 </style>
 <link rel="icon" type="image/jpeg" href="/amedina-logo.jpeg">
 <link rel="apple-touch-icon" href="/amedina-logo.jpeg">
@@ -276,6 +307,7 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
     <span class="nw">Amedina</span>
   </a>
   <ul class="nls">
+    <li><a href="#em-dialogo">Em diálogo</a></li>
     <li><a href="#dados">Base empírica</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#atuacao">Atuação</a></li>
@@ -302,7 +334,7 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
     </div>
     <div class="hero-ctas">
       <a href="#contato" class="bg">Iniciar conversa</a>
-      <a href="#sobre" class="bgh">Trajetória</a>
+      <a href="#em-dialogo" class="bgh">Palavras criam mundos</a>
     </div>
   </div>
 </section>
@@ -372,6 +404,47 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
 
 <div class="div"></div>
 
+
+<!-- AMEDINA EM DIÁLOGO -->
+<section class="dialogo" id="em-dialogo" aria-labelledby="dialogo-titulo">
+  <div class="dialogo-top">
+    <div><p class="dialogo-kicker">Amedina · Em diálogo</p><h2 id="dialogo-titulo">Palavras criam <em>mundos.</em></h2></div>
+    <div class="dialogo-intro">
+      <p>Como a linguagem, os dados e as instituições moldam a vida em comum? Essa pergunta atravessa a advocacia, a pesquisa e os projetos de Damares Medina.</p>
+      <p>Conheça os argumentos, explore as evidências e faça parte da conversa sobre justiça, tecnologia e participação pública.</p>
+    </div>
+  </div>
+  <div class="dialogo-grid">
+    <article class="dialogo-card">
+      <span class="dialogo-kind">Linguagem e poder</span>
+      <h3>Quem é o destinatário da justiça?</h3>
+      <p>Linguagem, memória e decisão se encontram na apresentação de Dublin: uma reflexão sobre o litígio como tecnologia de governo e a participação na jurisdição constitucional.</p>
+      <a href="https://icons.org.br/dublin2026/">Ler a apresentação de Dublin →</a>
+    </article>
+    <article class="dialogo-card">
+      <span class="dialogo-kind">Democracia e participação</span>
+      <h3>Minipúblicos constitucionais</h3>
+      <p>Projeto de Damares Medina e Renata Cherubim sobre a legitimidade democrática dos precedentes. A proposta articula escuta, informação equilibrada e deliberação cidadã, preservando a responsabilidade decisória da Corte.</p>
+      <a href="https://icons.org.br/trajetoria.html">Conhecer o projeto na trajetória do ICONS →</a>
+    </article>
+    <article class="dialogo-card">
+      <span class="dialogo-kind">Dados e instituições</span>
+      <h3>A Constituição na vida das decisões</h3>
+      <p>O PROJUS conecta pesquisa e visualização para acompanhar como a Constituição aparece nas decisões do Supremo. Uma entrada para investigar padrões, mudanças e perguntas em aberto.</p>
+      <a href="https://icons.org.br/">Explorar o PROJUS →</a>
+    </article>
+  </div>
+  <div class="dialogo-participar">
+    <div><h3>Acompanhe o pensamento em circulação</h3><p>Artigos, entrevistas, pesquisas e intervenções públicas reunidos nos canais de Damares Medina.</p>
+      <div class="dialogo-links"><a class="bgh" href="https://linktr.ee/amedina">Textos e entrevistas</a><a class="bgh" href="https://www.linkedin.com/in/damaresmedina/">Acompanhar no LinkedIn</a></div>
+    </div>
+    <div><h3>Traga uma pergunta</h3><p>Qual aspecto da justiça você gostaria de compreender melhor? Apresente uma questão, uma leitura crítica ou uma proposta de colaboração em pesquisa.</p>
+      <div class="dialogo-links"><a class="bg" href="mailto:damares@icons.org.br?subject=Amedina%20%E2%80%94%20pergunta%20ou%20colabora%C3%A7%C3%A3o">Escrever para Damares</a></div>
+      <p style="font-size:12px;margin-top:1rem">O link abre seu aplicativo de e-mail. Você revisa e envia a mensagem.</p>
+    </div>
+  </div>
+</section>
+
 <!-- SOBRE: foto esquerda, texto direita -->
 <section style="padding:0" id="sobre">
   <div class="about-g">
@@ -401,7 +474,7 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
 <div class="div"></div>
 
 <!-- SPLIT: foto + atuação teaser -->
-<section style="padding:0">
+<section style="padding:0" id="atuacao">
   <div class="split">
     <div class="split-content" style="background:var(--n3)">
       <div class="sh" style="margin-bottom:2.5rem"><div class="sn">02</div><h2 class="st">Áreas de<br><em>atuação</em></h2></div>
@@ -469,12 +542,15 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
       </div>
     </div>
     <div>
-      <form class="cf" onsubmit="return false">
-        <div class="ff"><label>Nome</label><input type="text" placeholder="Seu nome"></div>
-        <div class="ff"><label>Organização</label><input type="text" placeholder="Empresa ou instituição"></div>
-        <div class="ff"><label>País</label><input type="text" placeholder="Brasil ou Europa"></div>
-        <div class="ff"><label>Mensagem</label><textarea rows="4" placeholder="Descreva brevemente o assunto..."></textarea></div>
-        <button type="button" class="bg" style="align-self:flex-start">Enviar mensagem</button>
+      <form class="cf" id="contact-form">
+        <p class="contact-note" id="contact-help">Prepare sua mensagem abaixo. Ao continuar, ela será aberta no seu aplicativo de e-mail para revisão e envio a <a href="mailto:damares@icons.org.br">damares@icons.org.br</a>.</p>
+        <div class="ff"><label for="contact-name">Nome</label><input id="contact-name" name="nome" type="text" autocomplete="name" maxlength="150" required placeholder="Seu nome"></div>
+        <div class="ff"><label for="contact-org">Organização (opcional)</label><input id="contact-org" name="organizacao" type="text" autocomplete="organization" maxlength="200" placeholder="Empresa ou instituição"></div>
+        <div class="ff"><label for="contact-country">País (opcional)</label><input id="contact-country" name="pais" type="text" autocomplete="country-name" maxlength="100" placeholder="Seu país"></div>
+        <div class="ff"><label for="contact-message">Mensagem</label><textarea id="contact-message" name="mensagem" rows="5" maxlength="2000" required placeholder="Sua pergunta, proposta ou assunto de interesse..."></textarea></div>
+        <button type="submit" class="bg" style="align-self:flex-start" aria-describedby="contact-help">Preparar e-mail</button>
+        <p class="contact-note" id="contact-status" role="status"></p>
+        <noscript><p class="contact-note">Escreva diretamente para <a href="mailto:damares@icons.org.br">damares@icons.org.br</a>.</p></noscript>
       </form>
     </div>
   </div>
@@ -492,5 +568,22 @@ footer{background:var(--k);padding:1.6rem 3.5rem;display:flex;align-items:center
   </span>
 </footer>
 
+<script>
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const fields = new FormData(contactForm);
+  const name = fields.get('nome').trim();
+  const message = fields.get('mensagem').trim();
+  if (!name || !message) {
+    document.getElementById('contact-status').textContent = 'Preencha seu nome e sua mensagem.';
+    return;
+  }
+  const body = 'Nome: ' + name + '\nOrganização: ' + fields.get('organizacao').trim() + '\nPaís: ' + fields.get('pais').trim() + '\n\n' + message;
+  const email = 'mailto:damares@icons.org.br?subject=' + encodeURIComponent('Contato pelo site Amedina') + '&body=' + encodeURIComponent(body);
+  document.getElementById('contact-status').textContent = 'Conclua o envio no seu aplicativo de e-mail. Se ele não abrir, use o endereço acima. Sua mensagem permanece aqui.';
+  window.location.href = email;
+});
+</script>
 </body>
 </html>
