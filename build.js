@@ -1,0 +1,14 @@
+const fs=require('fs'),crypto=require('crypto');
+const BASE='https://raw.githubusercontent.com/damaresmedina/amedina-site/436d6b9c86218eca35dd2940fbb186fdf3e260a7/';
+const WANT={'index.html':'c5a74ad7ec0528ab53346e3cd20f1e632c6c7769','amedina-logo.jpeg':'4b0e756ae8342241f04bc679e2aa34569b444b5b'};
+(async()=>{
+for(const [f,sha] of Object.entries(WANT)){if(fs.existsSync(f))continue;const b=Buffer.from(await (await fetch(BASE+f)).arrayBuffer());
+const got=crypto.createHash('sha1').update(b).digest('hex');if(got!==sha)throw new Error(f+' sha mismatch '+got);fs.writeFileSync(f,b);}
+fs.mkdirSync('public',{recursive:true});
+let h=fs.readFileSync('index.html','utf8');
+h=h.replace("<meta name=\"description\" content=\"Damares Medina \u2014 Direito constitucional, pesquisa estrat\u00e9gica e analytics jur\u00eddico. Brasil e Europa.\">\n",'');
+if(!h.includes('rel="canonical"')) h=h.replace('</head>',"<link rel=\"canonical\" href=\"https://amedina.eu/\">\n<meta name=\"robots\" content=\"index, follow, max-image-preview:large\">\n<meta name=\"author\" content=\"Damares Medina\">\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Damares Medina\",\"url\":\"https://amedina.eu/\",\"image\":\"https://amedina.eu/amedina-logo.jpeg\",\"jobTitle\":\"Advogada constitucionalista e pesquisadora emp\u00edrica\",\"description\":\"Direito constitucional, pesquisa estrat\u00e9gica e analytics jur\u00eddico. Brasil e Europa.\",\"founder\":[{\"@type\":\"Organization\",\"name\":\"Instituto Constitui\u00e7\u00e3o Aberta (ICONS)\",\"url\":\"https://icons.org.br\"},{\"@type\":\"Organization\",\"name\":\"JudX\",\"url\":\"https://judx.com.br\"}],\"sameAs\":[\"https://www.linkedin.com/in/damaresmedina/\",\"https://linktr.ee/amedina\",\"https://icons.org.br\",\"https://judx.com.br\"]}\n</script>\n<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>\n<script defer src=\"/_vercel/insights/script.js\"></script>\n<script>(function(){try{if(/bot|crawl|spider|preview/i.test(navigator.userAgent))return;var q=new URLSearchParams(location.search);fetch('https://hetuhkhhppxjliiaerlu.supabase.co/rest/v1/amedina_pageviews',{method:'POST',keepalive:true,headers:{'apikey':'sb_publishable_o-czLjy2cewbXs29vTyzHQ_unH3p1wK','Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({path:location.pathname.slice(0,300),referrer:(document.referrer||'').slice(0,500)||null,lang:(navigator.language||'').slice(0,20),screen_w:Math.min(screen.width||0,10000),utm_source:(q.get('utm_source')||'').slice(0,100)||null})}).catch(function(){});}catch(e){}})();</script>\n"+'</head>');
+fs.writeFileSync('public/index.html',h);
+for(const f of ['amedina-logo.jpeg','robots.txt','sitemap.xml']) fs.copyFileSync(f,'public/'+f);
+console.log('build ok',h.length);
+})().catch(e=>{console.error(e);process.exit(1);});
